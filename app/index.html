@@ -5,31 +5,25 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title><%= appname %></title>
+        <title>lestrade</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <% if (includeBootstrap) { %>
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <!-- endbower -->
-        <!-- endbuild -->
-        <% } %>
+
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild --><% if (includeModernizr) { %>
+        <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
-        <% } %>
+
     </head>
     <body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <% if (includeBootstrap) { %>
+
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
@@ -37,7 +31,7 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <h3 class="text-muted"><%= appname %></h3>
+                <h3 class="text-muted">lestrade</h3>
             </div>
 
             <div class="jumbotron">
@@ -51,16 +45,16 @@
                     <h4>HTML5 Boilerplate</h4>
                     <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
 
-                    <% if (includeSass) { %><h4>Sass with Compass</h4>
+                    <h4>Sass with Compass</h4>
                     <p>Compass is an open-source CSS Authoring Framework that uses Sass.</p>
-                    <% } %>
+
 
                     <h4>Bootstrap</h4>
                     <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
 
-                    <% if (includeModernizr) { %><h4>Modernizr</h4>
+                    <h4>Modernizr</h4>
                     <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-                    <% } %>
+
                 </div>
             </div>
 
@@ -69,17 +63,7 @@
             </div>
 
         </div>
-        <% } else { %>
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <% if (includeSass) { %><li>Sass with Compass</li><% } %>
-            <% if (includeModernizr) { %><li>Modernizr</li><% } %>
-          </ul>
-        </div>
-        <% } %>
+
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -96,5 +80,24 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
-    </body>
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
 </html>

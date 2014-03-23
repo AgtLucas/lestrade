@@ -1,42 +1,24 @@
 {
-  "name": "generator-gulp-webapp",
-  "version": "0.0.4",
-  "description": "Scaffold out a front-end web app",
-  "license": "BSD",
-  "repository": "yeoman/generator-gulp-webapp",
-  "author": "The Yeoman Team",
-  "main": "app/index.js",
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.2.10"
-  },
-  "scripts": {
-    "test": "mocha --reporter spec"
-  },
-  "files": [
-    "app"
-  ],
-  "keywords": [
-    "yeoman-generator",
-    "web",
-    "app",
-    "front-end",
-    "h5bp",
-    "modernizr",
-    "jquery",
-    "gulp"
-  ],
-  "dependencies": {
-    "yeoman-generator": "~0.16.0",
-    "cheerio": "~0.13.0",
-    "chalk": "~0.4.0"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0",
-    "generator-mocha": ">=0.1.0",
-    "gulp": ">=3.5.0"
-  },
+  "name": "lestrade",
+  "version": "0.0.0",
+  "dependencies": {},
   "devDependencies": {
-    "mocha": "*"
+    "gulp": "~3.5.0",
+    "gulp-load-plugins": "~0.3.0",
+    "gulp-util": "~2.2.9",
+    "gulp-autoprefixer": "~0.0.6",
+    "gulp-jshint": "~1.4.0",
+    "gulp-imagemin": "~0.1.4",
+    "gulp-clean": "~0.2.4",
+    "gulp-cache": "~0.1.1",
+    "gulp-ruby-sass": "~0.3.0",
+    "gulp-size": "~0.1.2",
+    "gulp-connect": "~1.0.0",
+    "gulp-useref": "~0.1.2",
+    "gulp-bundle": "~0.2.0",
+    "wiredep": "~1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
   }
 }

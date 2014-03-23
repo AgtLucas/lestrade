@@ -1,5 +1,5 @@
 'use strict';
-// Generated on <%= (new Date).toISOString().split('T')[0] %> using <%= pkg.name %> <%= pkg.version %>
+// Generated on 2014-03-23 using generator-gulp-webapp 0.0.4
 
 var gulp = require('gulp');
 var wiredep = require('wiredep').stream;
@@ -7,7 +7,7 @@ var wiredep = require('wiredep').stream;
 // Load plugins
 var $ = require('gulp-load-plugins')();
 
-<% if (includeSass) { %>
+
 // Styles
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
@@ -19,15 +19,7 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('app/styles'))
         .pipe($.size());
 });
-<% } else { %>
-// Styles
-gulp.task('styles', function () {
-    return gulp.src('app/styles/main.css')
-        .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('app/styles'))
-        .pipe($.size());
-});
-<% } %>
+
 // Scripts
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
@@ -37,22 +29,11 @@ gulp.task('scripts', function () {
 });
 
 // HTML
-gulp.task('html', ['styles', 'scripts'], function () {
-    var jsFilter = $.filter('**/*.js');
-    var cssFilter = $.filter('**/*.css');
-
+gulp.task('html', function () {
     return gulp.src('app/*.html')
-        .pipe($.useref.assets())
-        .pipe(jsFilter)
-        .pipe($.uglify())
-        .pipe(jsFilter.restore())
-        .pipe(cssFilter)
-        .pipe($.csso())
-        .pipe(cssFilter.restore())
-        .pipe($.useref.restore())
-        .pipe($.useref())
-        .pipe(gulp.dest('dist'))
-        .pipe($.size());
+      .pipe($.useref())
+      .pipe(gulp.dest('dist'))
+      .pipe($.size());
 });
 
 // Images
@@ -69,11 +50,14 @@ gulp.task('images', function () {
 
 // Clean
 gulp.task('clean', function () {
-    return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], { read: false }).pipe($.clean());
+    return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], {read: false}).pipe($.clean());
 });
 
+// Bundle
+gulp.task('bundle', ['styles', 'scripts'], $.bundle('./app/*.html'));
+
 // Build
-gulp.task('build', ['html', 'images']);
+gulp.task('build', ['html', 'bundle', 'images']);
 
 // Default task
 gulp.task('default', ['clean'], function () {
@@ -89,7 +73,7 @@ gulp.task('connect', $.connect.server({
 
 // Inject Bower components
 gulp.task('wiredep', function () {
-    gulp.src('app/styles/*.<% if (includeSass) { %>scss<% } else { %>css<% } %>')
+    gulp.src('app/styles/*.scss')
         .pipe(wiredep({
             directory: 'app/bower_components',
             ignorePath: 'app/bower_components/'
@@ -108,28 +92,25 @@ gulp.task('wiredep', function () {
 gulp.task('watch', ['connect'], function () {
     // Watch for changes in `app` folder
     gulp.watch([
-        'app/*.html',<% if (includeSass) { %>
-        'app/styles/**/*.scss',<% } else { %>
-        'app/styles/**/*.css',<% } %>
+        'app/*.html',
+        'app/styles/**/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
-    ], function (event) {
+    ], function(event) {
         return gulp.src(event.path)
             .pipe($.connect.reload());
     });
-
-    <% if (includeSass) { %>// Watch .scss files
+    
+    // Watch .scss files
     gulp.watch('app/styles/**/*.scss', ['styles']);
+    
 
-    <% } else { %>// Watch .css files
-    gulp.watch('app/styles/**/*.css', ['styles']);
-
-    <% }  %>// Watch .js files
+    // Watch .js files
     gulp.watch('app/scripts/**/*.js', ['scripts']);
 
     // Watch image files
     gulp.watch('app/images/**/*', ['images']);
 
     // Watch bower files
-    gulp.watch('bower.json', ['wiredep']);
+    gulp.watch('app/bower_components/*', ['wiredep']);
 });
