@@ -5,3 +5,4 @@ dist
 app/bower_components
 app/styles/*.css
 app/scripts/*.js
+app/*.html

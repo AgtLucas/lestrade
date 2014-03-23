@@ -1,0 +1,105 @@
+//- HTML5 Doctype
+doctype html
+
+//- Modernizr HTML tag
+html.no-js(lang='')
+
+    //- Let's get started.
+    head
+
+        //- Document settings and metadata.
+        title
+        meta(charset='')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        meta(name='designer', content='')
+        meta(name='rating', content='')
+        meta(name='keywords', content='')
+
+        //- Apple stuff.
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style', content='black')
+        meta(name='format-detection', content='telephone=yes')
+
+        //- Robots and Viewport.
+        meta(name='robots', content='index, follow')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+        //- OpenGraph for Facebook.
+        meta(property='og:type', content='')
+        meta(property='og:title', content='')
+        meta(property='og:url', content='')
+        meta(property='og:description', content='')
+        meta(property='og:image', content='')
+        meta(property='og:locale', content='')
+
+        //- Icons.
+        link(rel='shortcut icon', href='')
+        link(rel='apple-touch-icon', href='')
+
+        //- Prerendering and Prefetching.
+        link(rel='prerender', href='')
+        link(rel='prefetch', href='')
+        link(rel='dns-prefetch', href='')
+
+        //- Miscellaneous and SEO stuff.
+        link(rel='canonical', href='')
+        link(rel='sitemap', href='')
+        link(rel='next', href='')
+        link(rel='prev', href='')
+
+        // build:css styles/main.css
+        link(rel='stylesheet', href='styles/main.css')
+        // endbuild
+
+        // build:js scripts/header.js
+        script(src='bower_components/modernizr/modernizr.js')
+        // endbuild
+
+    body
+        .container
+            .header
+                ul.nav.nav-pills.pull-right
+                    li.active
+                        a(href='#') Home
+                    li
+                        a(href='#') About
+                    li
+                        a(href='#') Contact
+                h3.text-muted lestrade
+            .jumbotron
+                h1 'Allo, 'Allo!
+                p.lead Always a pleasure scaffolding your apps.
+                p
+                    a.btn.btn-lg.btn-success(href='#') Splendid!
+            .row.marketing
+                .col-lg-6
+                    h4 HTML5 Boilerplate
+                    p HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+                    h4 Sass with Compass
+                    p Compass is an open-source CSS Authoring Framework that uses Sass.
+                    h4 Bootstrap
+                    p Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
+                    h4 Modernizr
+                    p Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.
+            .footer
+                p ♥ from the Yeoman team
+
+    // build:js scripts/footer.js
+    // bower:js
+    script(src='bower_components/jquery/jquery.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/affix.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/carousel.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/scrollspy.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js')
+    script(src='bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js')
+    script(src='scripts/main.js')
+    // endbower
+    // endbuild
