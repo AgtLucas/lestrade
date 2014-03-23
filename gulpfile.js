@@ -22,9 +22,11 @@ gulp.task('styles', function () {
 
 // Scripts
 gulp.task('scripts', function () {
-    return gulp.src('app/scripts/**/*.js')
-        .pipe($.jshint('.jshintrc'))
-        .pipe($.jshint.reporter('default'))
+    return gulp.src('app/scripts/**/*.coffee')
+        .pipe($.coffeelint())
+        .pipe($.coffeelint.reporter())
+        .pipe($.coffee())
+        .pipe(gulp.dest('app/scripts'))
         .pipe($.size());
 });
 
@@ -55,7 +57,7 @@ gulp.task('files', function () {
 
 // Clean
 gulp.task('clean', function () {
-    return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], {read: false}).pipe($.clean());
+    return gulp.src(['dist'], {read: false}).pipe($.clean());
 });
 
 // Bundle
@@ -94,7 +96,7 @@ gulp.task('wiredep', function () {
 });
 
 // Watch
-gulp.task('watch', ['connect'], function () {
+gulp.task('watch', ['connect', 'styles', 'scripts'], function () {
     // Watch for changes in `app` folder
     gulp.watch([
         'app/*.html',
@@ -110,8 +112,8 @@ gulp.task('watch', ['connect'], function () {
     gulp.watch('app/styles/**/*.scss', ['styles']);
 
 
-    // Watch .js files
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
+    // Watch .coffee files
+    gulp.watch('app/scripts/**/*.coffee', ['scripts']);
 
     // Watch image files
     gulp.watch('app/images/**/*', ['images']);

@@ -16,9 +16,12 @@
     "gulp-connect": "~1.0.0",
     "gulp-useref": "~0.1.2",
     "gulp-bundle": "~0.2.0",
-    "wiredep": "~1.1.0"
+    "wiredep": "~1.1.0",
+    "gulp-coffee": "^1.4.1",
+    "gulp-coffeelint": "^0.3.1"
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "coffeelintConfig": {}
 }
