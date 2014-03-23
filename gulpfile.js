@@ -10,11 +10,9 @@ var $ = require('gulp-load-plugins')();
 
 // Styles
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.scss')
-        .pipe($.rubySass({
-          style: 'expanded',
-          loadPath: ['app/bower_components']
-        }))
+    return gulp.src('app/styles/main.less')
+        .pipe($.less())
+        .pipe($.recess())
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('app/styles'))
         .pipe($.size());
