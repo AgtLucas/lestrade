@@ -1,21 +1,73 @@
+<!-- HTML5 Doctype. Remember to delete these comments (Quirks Mode). -->
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!-- Modernizr HTML tags with IE classes. -->
+<!--[if lt IE 7]> <html lang="" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html lang="" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang="" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="" class="no-js"> <!--<![endif]-->
+
+    <!-- Let's get started. -->
     <head>
-        <meta charset="utf-8">
-        <title>lestrade</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- Document settings and metadata. -->
+        <title></title>
+        <meta charset="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="designer" content="" />
+        <meta name="rating" content="" />
+        <meta name="keywords" content="" />
+
+        <!-- Apple stuff. -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=yes" />
+
+        <!-- Robots and Viewport. -->
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <!-- OpenGraph for Facebook. -->
+        <meta property="og:type" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:locale" content="" />
+
+        <!-- Icons. -->
+        <link rel="shortcut icon" href="" />
+        <link rel="apple-touch-icon" href="" />
+
+        <!-- Prerendering and Prefetching. -->
+        <link rel="prerender" href="" />
+        <link rel="prefetch" href="" />
+        <link rel="dns-prefetch" href="" />
+
+        <!-- Miscellaneous and SEO stuff. -->
+        <link rel="canonical" href="" />
+        <link rel="sitemap" href="" />
+        <link rel="next" href="" />
+        <link rel="prev" href="" />
 
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
+
+        <!-- build:js scripts/header.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
 
     </head>
     <body>
@@ -64,24 +116,9 @@
 
         </div>
 
-
-        <!-- build:js scripts/vendor.js -->
+        <!-- build:js scripts/footer.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <!-- build:js scripts/plugins.js -->
         <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/affix.js"></script>
         <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
         <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
@@ -94,10 +131,10 @@
         <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
         <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
         <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
+    </body>
+
 </html>
