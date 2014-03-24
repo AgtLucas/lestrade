@@ -21,6 +21,9 @@
                 .pipe($.recess()),
             gulp.src('app/styles/**/*.less')
                 .pipe($.less())
+                .pipe($.uncss({
+                    html: ['app/index.html', 'app/404.html']
+                }))
                 .pipe($.autoprefixer('last 1 version'))
                 .pipe(gulp.dest('app/styles'))
                 .pipe($.size())
@@ -49,6 +52,8 @@
     gulp.task('html', function () {
         return gulp.src('app/*.html')
             .pipe($.useref())
+            .pipe($.w3cjs())
+            .pipe($.sitemap())
             .pipe(gulp.dest('dist'))
             .pipe($.size());
     });
