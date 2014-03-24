@@ -1,48 +1,49 @@
 {
-    "name": "lestrade",
-    "version": "1.0.0",
-    "description": "Scalable websites with bulldog tenacity.",
-    "main": "gulpfile.js",
-    "devDependencies": {
-        "gulp": "^3.5.6",
-        "gulp-load-plugins": "^0.4.0",
-        "gulp-util": "^2.2.14",
-        "gulp-autoprefixer": "0.0.6",
-        "gulp-imagemin": "^0.1.5",
-        "gulp-clean": "^0.2.4",
-        "gulp-cache": "^0.1.3",
-        "gulp-size": "^0.1.3",
-        "gulp-connect": "^1.0.9",
-        "gulp-useref": "^0.2.2",
-        "gulp-bundle": "^0.2.3",
-        "wiredep": "^1.3.3",
-        "gulp-coffee": "^1.4.1",
-        "gulp-coffeelint": "^0.3.1",
-        "gulp-jade": "^0.4.2",
-        "gulp-less": "^1.2.3",
-        "gulp-recess": "^0.2.0"
-    },
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "coffeelintConfig": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/haydenbleasel/lestrade.git"
-    },
-    "keywords": [
-        "scalable",
-        "website",
-        "scaffold",
-        "gulp"
-    ],
-    "author": "Hayden Bleasel <haydenbleasel@gmail.com>",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/haydenbleasel/lestrade/issues"
-    },
-    "homepage": "https://github.com/haydenbleasel/lestrade"
+  "name": "lestrade",
+  "version": "1.0.0",
+  "description": "Scalable websites with bulldog tenacity.",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-load-plugins": "^0.4.0",
+    "gulp-util": "^2.2.14",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-imagemin": "^0.1.5",
+    "gulp-clean": "^0.2.4",
+    "gulp-cache": "^0.1.3",
+    "gulp-size": "^0.1.3",
+    "gulp-connect": "^1.0.9",
+    "gulp-useref": "^0.2.2",
+    "gulp-bundle": "^0.2.3",
+    "wiredep": "^1.3.3",
+    "gulp-coffee": "^1.4.1",
+    "gulp-coffeelint": "^0.3.1",
+    "gulp-jade": "^0.4.2",
+    "gulp-less": "^1.2.3",
+    "gulp-recess": "^0.2.0",
+    "event-stream": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "coffeelintConfig": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haydenbleasel/lestrade.git"
+  },
+  "keywords": [
+    "scalable",
+    "website",
+    "scaffold",
+    "gulp"
+  ],
+  "author": "Hayden Bleasel <haydenbleasel@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haydenbleasel/lestrade/issues"
+  },
+  "homepage": "https://github.com/haydenbleasel/lestrade"
 }
