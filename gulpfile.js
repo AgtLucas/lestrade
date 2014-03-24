@@ -13,6 +13,7 @@
 
     // Workaround for broken connect plugin.
     $.connect = require('gulp-connect');
+    $.minifyHTML = require('gulp-minify-html');
 
     // Styles
     gulp.task('styles', function () {
@@ -53,6 +54,10 @@
         return gulp.src('app/*.html')
             .pipe($.useref())
             .pipe($.w3cjs())
+            .pipe($.minifyHTML({
+                quotes: true
+            }))
+            .pipe(gulp.dest('dist'))
             .pipe($.sitemap())
             .pipe(gulp.dest('dist'))
             .pipe($.size());
