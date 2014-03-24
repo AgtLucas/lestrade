@@ -8,6 +8,7 @@
     // Require Gulp and it's plugins.
     var gulp = require('gulp'),
         wiredep = require('wiredep').stream,
+        es = require('event-stream'),
         $ = require('gulp-load-plugins')();
 
     // Workaround for broken connect plugin.
@@ -15,12 +16,15 @@
 
     // Styles
     gulp.task('styles', function () {
-        return gulp.src('app/styles/main.less')
-            .pipe($.less())
-            .pipe($.recess())
-            .pipe($.autoprefixer('last 1 version'))
-            .pipe(gulp.dest('app/styles'))
-            .pipe($.size());
+        return es.concat(
+            gulp.src('app/styles/main.less')
+                .pipe($.recess()),
+            gulp.src('app/styles/**/*.less')
+                .pipe($.less())
+                .pipe($.autoprefixer('last 1 version'))
+                .pipe(gulp.dest('app/styles'))
+                .pipe($.size())
+        )
     });
 
     // Scripts
@@ -75,10 +79,10 @@
     gulp.task('bundle', ['styles', 'scripts'], $.bundle('./app/*.html'));
 
     // Build
-    gulp.task('build', ['templates', 'html', 'bundle', 'images', 'files']);
+    gulp.task('build', ['html', 'bundle', 'images', 'files']);
 
     // Default task
-    gulp.task('default', ['clean'], function () {
+    gulp.task('default', ['clean', 'templates'], function () {
         gulp.start('build');
     });
 
