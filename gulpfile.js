@@ -85,6 +85,13 @@
         return gulp.src(['dist'], {read: false}).pipe($.clean());
     });
 
+    // Bump JSON version
+    gulp.task('bump', function (params) {
+        gulp.src('*.json')
+            .pipe($.bump({ type: gulp.env.type }))
+            .pipe(gulp.dest('./'));
+    });
+
     // Bundle
     gulp.task('bundle', ['styles', 'scripts'], $.bundle('./app/*.html'));
 
