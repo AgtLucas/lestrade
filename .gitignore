@@ -1,5 +1,6 @@
 node_modules
-test/gulp-file
-test/sass
-test/slug
-temp/
+dist
+app/bower_components
+app/styles/*.css
+app/scripts/*.js
+app/*.html
