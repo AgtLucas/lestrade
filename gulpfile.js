@@ -28,7 +28,7 @@
                 .pipe($.autoprefixer('last 1 version'))
                 .pipe(gulp.dest('app/styles'))
                 .pipe($.size())
-        )
+        );
     });
 
     // Scripts
