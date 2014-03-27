@@ -132,6 +132,7 @@
 
     // Watch
     gulp.task('watch', ['styles', 'scripts', 'templates', 'connect'], function () {
+
         // Watch for changes in `app` folder
         gulp.watch([
             'app/*.html',

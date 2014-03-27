@@ -59,7 +59,52 @@ html.no-js(lang='en')
 
     body
         .container
-            img.logo(src='images/logo.png')
+            header
+                img.logo(src='images/logo.png', alt='Lestrade')
+            .row
+                .col-md-3
+                    h1 Templates
+                    h2 Jade
+                    p A terse and simple templating language with a strong focus on performance and powerful features heavily influenced by HAML and implemented with Javascript for Node.js.
+                    h2 Useref
+                    p Parse build blocks in HTML files to replace references to non-optimized scripts or stylesheets. Inspired by the grunt plugin grunt-useref. It can handle file concatenation but not minification. Files are then passed down the stream.
+                    h2 W3CJS
+                    p A Node.js library for testing files or URLs against the W3C HTML validator. An efficient way of making sure your templates don't suck before you push them to deployment.
+                    h2 MinifyHTML
+                    p Based of Minimize - a HTML minifier based on the node-htmlparser. This dependency will ensure output is solid and correct. Minimize is focussed on HTML5 and will not support older HTML drafts.
+                    h2 Sitemap
+                    p Easily generate a search engine friendly sitemap.xml from your project using a Gulp stream. Search engines love the sitemap.xml and it helps SEO as well. So much easier than generating one manually.
+                .col-md-3
+                    h1 Styles
+                    h2 Less
+                    p Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable.
+                    h2 Recess
+                    p Developed at Twitter to support their internal styleguide, Recess is a simple, attractive code quality tool for CSS built on top of Less to keep your source looking clean and super manageable.
+                    h2 UNCSS
+                    p UnCSS is a tool that removes unused CSS from your stylesheets. It works across multiple files and supports Javascript-injected CSS. A super-efficient (sometimes risky) way of massively decreasing file size.
+                    h2 Autoprefixer
+                    p Parse CSS and add vendor prefixes to CSS rules using values from Can I Use. Write your CSS without vendor prefixes and it will use the data on current browser popularity and properties support to apply prefixes for you.
+                .col-md-3
+                    h1 Scripts
+                    h2 Coffeescript
+                    p CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart. CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way.
+                    h2 UglifyJS2
+                    p UglifyJS is a JavaScript compressor/minifier written in JavaScript. It also contains tools that allow one to automate working with JavaScript code like a parser, code generator, optimizer, mangler, scope analyzer, tree walker and tree transformer.
+                    h2 Coffeelint
+                    p CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent by enforcing a consistent style across a code base. Used with Coffeescript to insulate you from many of JavaScript's bad parts.
+                .col-md-3
+                    h1 Other Stuff
+                    h2 Imagemin
+                    p Minify GIF, JPEG and PNG images seamlessly with Node.js using gifsicle, jpegtran, optipng and pngquant. Basically, just squeezes the crap out of your images for faster loading on webpages.
+                    h2 Bump
+                    p Bump all your JSON files (package.json, bower.json) which supports semver versioning with a simple command. Try out the following:
+                    code gulp bump --type major
+                    h2 Clean
+                    p A simple command for removing files and folders (AKA keeping your project clean). It runs itself during the build and watch processes, but for a manual clean you can try this:
+                    code gulp clean:app
+                    h2 Connect
+                    p Gulp plugin connect to server, LiveReload and opening browser. Also hooked up with the Watch command in the background to enable auto-reloading of files. Try it out with:
+                    code gulp watch
 
         // build:js scripts/footer.js
         // bower:js
