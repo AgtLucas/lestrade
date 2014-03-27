@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Lestrade</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Lestrade is a JS scaffold for building scalable websites with bulldog tenacity." />
+        <meta name="author" content="Hayden Bleasel" />
+        <meta name="designer" content="Hayden Bleasel" />
+        <meta name="rating" content="general" />
+        <meta name="keywords" content="js,scaffold,lestrade,scalable,hayden,bleasel" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Lestrade" />
+        <meta property="og:url" content="http://haydenbleasel.com/lestrade/" />
+        <meta property="og:description" content="Lestrade is a JS scaffold for building scalable websites with bulldog tenacity." />
+        <meta property="og:image" content="open-graph.png" />
+        <meta property="og:locale" content="en_US" />
+        <link rel="icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="prerender" href="http://haydenbleasel.com/" />
+        <link rel="prefetch" href="http://haydenbleasel.com/" />
+        <link rel="canonical" href="http://haydenbleasel.com/lestrade/" />
+        <link rel="sitemap" href="http://haydenbleasel.com/lestrade/sitemap.gz" />
+        <link rel="next" href="http://haydenbleasel.com/" />
+        <link rel="prev" href="https://twitter.com/haydenbleasel" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="header">
+              <img id="logo" src="logo.png" alt="Lestrade" />
+        </div>
+        <div id="content">
+            <div class="container">
+                <div class="section">
+                    <h1>What is Lestrade?</h1>
+                    <p>Lestrade is a movement for a better web. Technically speaking it's a fully-featured, pure-JS web scaffold complete with deployment automation, package management and a robust file structure. It's used for creating efficient and scalable websites by handling all the repetitive work for you, allowing you to focus on the code rather than the trivia. It's still in development, but feel free to learn and contribute on the <a href="https://github.com/haydenbleasel/lestrade">repository</a>.</p>
+                </div>
+                <div class="section">
+                    <h1>Features</h1>
+                    <p>Lestrade's streaming build system configuration is made up of multiple automated tasks. The primary ones are for templating, styles and scripts. Whilst not mentioned here, there are a collection of miscellaneous functions that help the system run such as cleaning and file copying.</p>
+                    <p>Templates (pages) are written in <a href="http://jade-lang.com/" target="_blank">Jade</a>, the Node.js templating engine. After compiling the Jade templates, Lestrade parses the HTML and replaces references to non-optimized scripts or stylesheets with their compiled counterparts. The template is then tested against the W3C HTML validator and if everything's all good, it's heavily minified and a sitemap is produced.</p>
+                    <p>Stylesheets in Lestrade are written in <a href="http://lesscss.org/" target="_blank">Less</a>, a CSS pre-processor built in Node.js. Your main stylesheet is linted by <a href="http://twitter.github.io/recess/" target="_blank">Recess</a>, Twitter's CSS quality tool. All your stylesheets are then cross-referenced with your templates and unused CSS is removed. Once this is complete, vendor prefixes are added to the compiled stylesheets. It's all minified with the auspiciously named <a href="https://code.google.com/p/cssmin/" target="_blank">cssmin</a>, a CSS parser and minifier.</p>
+                    <p>Scripts are written in <a href="http://coffeescript.org/" target="_blank">Coffeescript</a>, a pre-processor for Javascript that (you guessed it) runs on Node.js. Before being compiled, your Coffeescript is run through <a href="http://www.coffeelint.org/" target="_blank">Coffeelint</a> which helps keep your code clean and consistent. Finally, the scripts are minified and compressed with <a href="http://lisperator.net/uglifyjs/" target="_blank">UglifyJS</a>, a JavaScript compressor and minifier written in JavaScript.</p>
+                </div>
+                <div class="section">
+                    <h1>Usage</h1>
+                    <p>Surprisingly, Lestrade isn't very difficult to use. All your source code goes in the "app" folder and is deployed into the "dist" folder. There are only a few functions you need to know to get started.</p>
+                    <p>Download Lestrade's dependencies (you only need this once):</p>
+                    <code>./primer.bat</code>
+                    <p>Build your website:</p>
+                    <code>gulp</code>
+                    <p>Boot up the live preview server:</p>
+                    <code>gulp watch</code>
+                    <p>Clean up the project:</p>
+                    <code>gulp clean</code>
+                    <p>Bump your version number. Options are "major", "minor" and "patch":</p>
+                    <code>gulp bump --type major</code>
+                </div>
+                <div class="section">
+                    <h1>Download</h1>
+                    <p>Eventually there will be a few ways to download Lestrade, but for now let's stick with downloading from GitHub. You can either <a href="https://github.com/haydenbleasel/lestrade/archive/master.zip">download the repo</a> directly or clone it from GitHub with:</p>
+                    <code>git clone https://github.com/haydenbleasel/lestrade.git</code>
+                </div>
+                <div class="section">
+                    <h1>BSD License</h1>
+                    <p>This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
