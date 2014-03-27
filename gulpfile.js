@@ -28,7 +28,7 @@
                 .pipe($.autoprefixer('last 1 version'))
                 .pipe(gulp.dest('app/styles'))
                 .pipe($.size())
-        )
+        );
     });
 
     // Scripts
@@ -132,6 +132,7 @@
 
     // Watch
     gulp.task('watch', ['styles', 'scripts', 'templates', 'connect'], function () {
+
         // Watch for changes in `app` folder
         gulp.watch([
             'app/*.html',
